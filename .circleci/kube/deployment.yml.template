@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola-docker-deployment
+  namespace: default
+  labels:
+    app: hola-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-docker
+  template:
+    metadata:
+      labels:
+        app: demo-docker
+    spec:
+      containers:
+        - name: demo-docker
+          image: juanrivera/demo-docker:$COMMIT_SHA1
+          ports:
+            - containerPort: 80
+              name: http
