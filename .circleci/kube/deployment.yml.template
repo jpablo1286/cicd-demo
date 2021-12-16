@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: demo-docker
-          image: juanrivera/demo-docker:$COMMIT_SHA1
+          image: juanriveraorg/demo-docker:$COMMIT_SHA1
           ports:
             - containerPort: 80
               name: http

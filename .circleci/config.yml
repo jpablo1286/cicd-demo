@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/buildpack-deps:stretch
     environment:
-      IMAGE_NAME: juanrivera/demo-docker
+      IMAGE_NAME: juanriveraorg/demo-docker
     working_directory: ~/app
     steps:
       - checkout
