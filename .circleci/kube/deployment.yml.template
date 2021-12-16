@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hola-docker-deployment
+  name: demo-docker-deployment
   namespace: default
   labels:
-    app: hola-docker
+    app: demo-docker
 spec:
   replicas: 1
   selector:
